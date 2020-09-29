@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
+import 'app_module.dart';
 import 'features/home/presentation/blocs/home_bloc.dart';
 import 'features/home/presentation/home_screen.dart';
 import 'injection_container.dart' as di;
@@ -9,7 +11,7 @@ import 'injection_container.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await di.init();
-  runApp(UserGeneratorApp());
+  runApp(ModularApp(module: AppModule()));
 }
 
 class UserGeneratorApp extends StatelessWidget {

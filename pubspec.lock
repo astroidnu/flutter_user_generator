@@ -134,6 +134,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
+  feature_user:
+    dependency: "direct main"
+    description:
+      path: "feature/feature_user"
+      relative: true
+    source: path
+    version: "1.0.0+1"
   flutter:
     dependency: "direct main"
     description: flutter

@@ -1,5 +1,5 @@
 import 'package:feature_user/di/user_module.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:http/http.dart' as http;
 import 'package:user_generator/splash_screen.dart';

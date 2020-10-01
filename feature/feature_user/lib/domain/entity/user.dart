@@ -2,9 +2,9 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 
 class User extends Equatable {
-  String name;
-  String email;
-  String photoUrl;
+  final String name;
+  final String email;
+  final String photoUrl;
 
   User({
     @required this.name,

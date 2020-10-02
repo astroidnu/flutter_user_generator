@@ -1,3 +1,5 @@
+import 'package:feature_user/domain/entity/user.dart';
+import 'package:feature_user/presentation/detail_user/detail_user_screen.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../data/datasources/user_remote_data_source.dart';
@@ -19,6 +21,7 @@ class UserModule extends ChildModule {
   @override
   List<ModularRouter> get routers => [
     ModularRouter("/", child: (_, __) => UsersScreen()),
+    ModularRouter("/user/detail", child: (_, args) => DetailUserScreen(user: args.data as User)),
   ];
 
 }

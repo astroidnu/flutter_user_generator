@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:feature_user/domain/router/users_screen_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -16,6 +17,8 @@ class UsersScreen extends StatefulWidget {
 
 class _UsersScreenState extends State<UsersScreen> {
   Completer<void> _refreshCompleter;
+
+  final UsersScreenRouter _router = UsersScreeRouterImpl();
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +51,7 @@ class _UsersScreenState extends State<UsersScreen> {
                             email: user.email,
                             url: user.photoUrl,
                             onPressed: () {
-                              // _router.goToDetailScreen(user);
+                              _router.goToUserDetailScreen(user);
                             },
                           ),
                         );
